@@ -1,0 +1,557 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(209, 56, 153);
+    background-image: url('./');
+    background-size: cover;
+}
+
+.hide{
+    display: none;
+}
+/*home CSS*/
+.homeImg{
+    width: 70%;
+    opacity: 0.9;
+    background-size: cover;
+    position: relative;
+    left: 15%;
+    right: 15%;
+    
+    
+}
+.homeScreen h3{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5rem;
+    color: white;
+}
+
+.startBtn {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 3rem;
+    color: white;
+    width: 20%;
+    padding: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.startBtn:hover{
+    border: 4px solid rgb(43, 43, 43);
+    font-size:3.5rem;
+    background-color: rgb(209, 56, 153);
+}
+
+.spiderAnime1{
+    position: absolute;
+    top: 0;
+    right: 10%;
+    font-size: 3rem;
+    animation-name: spiderAnimtion;
+    animation-duration: 3s;
+    animation-iteration-count: 20000;
+    color: rgb(255, 140, 0);
+}
+@keyframes spiderAnimtion{
+    0%{top: 0;}
+    50%{top: 10%;}
+    100%{top:0;}
+}
+
+.spiderLine{
+    position: absolute;
+    top: 0;
+    right: 11.3%;
+    background-color: rgb(0, 0, 0);
+    width: 0.2rem;
+    animation-name: spiderLineAnimtion;
+    animation-duration: 3s;
+    animation-iteration-count: 20000;
+}
+@keyframes  spiderLineAnimtion{
+    0%{height: 2%;}
+    50%{height: 12%;}
+    100%{height:2%;}
+}
+.gameBC{
+    cursor: none;
+    
+}
+.spider-Anime2 {
+    position: absolute;
+    display: none;
+    font-size: 4rem;
+    animation-name: spiderFall;
+    animation-duration: 3s;
+    top: 0;
+    color: rgb(230, 105, 9);
+    background-size: 10rem;
+}
+@keyframes spiderFall{
+    from{top:0;display: block;}
+    to{top: 105%;display: block;}
+}
+.attempt{
+    font-size: 1.3rem;
+    z-index: -12345678;
+    color: rgb(66, 66, 66);
+    position: fixed;
+    top: 0.5%;
+    left: 1%;
+}
+.points{
+    font-size: 1.5rem;
+    z-index: -123456789;
+    color: rgb(66, 66, 66);
+    position: fixed;
+    top: 0.5%;
+    right: 1%;
+    border-radius: 50%;
+    padding: 1.5rem;
+    border: 4px solid rgb(240, 154, 5);
+    text-align: center;
+}
+.spider-line{
+    position: absolute;
+    top: 0;
+    width: 4.5rem;
+}
+.spider-line-anime{
+    animation-name: spiderLineAnimation2;
+    animation-duration: 3s;
+}
+@keyframes  spiderLineAnimation2{
+    from{height: 0;}
+    to{height: 105%;}
+}
+.spider-line-anime-die{
+    display: none;
+}
+@keyframes  spiderLineAnimation3{
+    10%{transform: rotateX(180deg);height: 25%;}
+    50%{transform: rotateX(180deg);transform: rotateY(160deg);transform: rotateZ(25deg);height: 0;}
+    100%{transform: rotateZ(110deg);height: 0;top: 95%;}
+}
+ .pause-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 45%;
+    min-height: 40%;
+    font-size: 1.2rem;
+    background-color: white;
+    padding: 2.5rem;
+    z-index: 124;
+    text-align: center;
+}
+.game-end-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 55%;
+    min-height: 90%;
+    font-size: 1.2rem;
+    background-color: rgb(208, 196, 196);
+    padding: 2.5rem;
+    z-index: 124;
+    text-align: center;
+    opacity: 0.9;
+}
+.restart-btn, .continue-btn{
+    width: 90%;
+    min-height: 10%;
+    font-size: 1.3rem;
+    background-color: rgb(248, 8, 192);
+    opacity: 0.8;
+    color: rgb(3, 10, 29);
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.restart-btn{
+    position: absolute;
+    bottom: 3%;
+    transform: translate(-50% -50%);
+    left: 5%;
+}
+.restart-btn:hover{
+    font-size: 1.5rem;
+    background-color: rgb(222, 51, 197);
+}
+
+
+
+.points1{
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+}
+
+
+button:hover i{
+    transform: rotateZ(200deg);
+}
+button:hover{
+    background-color:rgb(28, 216, 28) ;
+}
+.pause-modal p{
+    font-size: 1.8rem;
+}
+.fa-face-frown{
+    color: rgb(255, 166, 0);
+    font-size: 2.5rem;
+}
+
+.homeImgPhone{
+    display: none;
+}
+@media screen and (max-width: 1000px) {
+   .game-end-modal{
+    min-height: 50%;
+   }
+}
+@media screen and (max-width: 400px) {
+    .homeScreen h1{
+        font-size: 3.4rem;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .homeScreen h3{
+        font-size: 2.7rem;
+        text-align: center;
+    }
+    .homeScreen button{
+        width: 40%;
+    }
+    .homeImg{
+        display: none;
+    }
+    .homeImgPhone{
+        display: block;
+    }
+    .game-end-modal{
+        min-height: 40%;
+        min-width: 80%;
+    }
+    .save-modal{
+        min-height: 40%;
+        min-width: 85%;
+    }
+    #saveGameInModal{
+        width: 28%;
+    }
+    .rank-list{
+        min-height: 40%;
+        width: 100%;
+    }
+    .place{
+        font-size: 1.6rem;
+    }
+    .userImg{
+        width: 4rem;
+        height: 4rem;
+        left: 27%;
+    }
+    .name1, .points1{
+        font-size: 1.2rem;
+    }
+    .name1{
+        left: 52%;
+    }
+    .points1{
+        left: 80%;
+    }
+}
+
+.custom-cursor {
+    position: fixed;
+    width: 160px; /* Adjust to match your image size */
+    height: 110px;
+    background: url('./backet1.png') no-repeat center;
+    background-size: contain;
+    pointer-events: none; /* Prevents blocking clicks */
+    transform: translate(-50%, -50%);
+  }
+  .custom-cursor2 {
+    position: fixed;
+    width: 160px; /* Adjust to match your image size */
+    height: 110px;
+    background: url('./basket1c.png') no-repeat center;
+    background-size: contain;
+    pointer-events: none; /* Prevents blocking clicks */
+    transform: translate(-50%, -50%);
+  }
+  .custom-cursor3 {
+    position: fixed;
+    width: 160px; /* Adjust to match your image size */
+    height: 110px;
+    background: url('./basket2c.png') no-repeat center;
+    background-size: contain;
+    pointer-events: none; /* Prevents blocking clicks */
+    transform: translate(-50%, -50%);
+  }
+  .custom-cursor4 {
+    position: fixed;
+    width: 160px; /* Adjust to match your image size */
+    height: 110px;
+    background: url('./basket3c.png') no-repeat center;
+    background-size: contain;
+    pointer-events: none; /* Prevents blocking clicks */
+    transform: translate(-50%, -50%);
+  }
+  .custom-cursor5 {
+    position: fixed;
+    width: 160px; /* Adjust to match your image size */
+    height: 110px;
+    background: url('./basket4c.png') no-repeat center;
+    background-size: contain;
+    pointer-events: none; /* Prevents blocking clicks */
+    transform: translate(-50%, -50%);
+  }
+  .custom-cursor6 {
+    position: fixed;
+    width: 160px; /* Adjust to match your image size */
+    height: 110px;
+    background: url('./basket5c.png') no-repeat center;
+    background-size: contain;
+    pointer-events: none; /* Prevents blocking clicks */
+    transform: translate(-50%, -50%);
+  }
+  .custom-cursor7 {
+    position: fixed;
+    width: 160px; /* Adjust to match your image size */
+    height: 110px;
+    background: url('./basket6c.png') no-repeat center;
+    background-size: contain;
+    pointer-events: none; /* Prevents blocking clicks */
+    transform: translate(-50%, -50%);
+  }
+  .custom-cursor8 {
+    position: fixed;
+    width: 160px; /* Adjust to match your image size */
+    height: 110px;
+    background: url('./basket7c.png') no-repeat center;
+    background-size: contain;
+    pointer-events: none; /* Prevents blocking clicks */
+    transform: translate(-50%, -50%);
+  }
+  .custom-cursor9 {
+    position: fixed;
+    width: 160px; /* Adjust to match your image size */
+    height: 110px;
+    background: url('./basket8c.png') no-repeat center;
+    background-size: contain;
+    pointer-events: none; /* Prevents blocking clicks */
+    transform: translate(-50%, -50%);
+  }
+  .custom-cursor10 {
+    position: fixed;
+    width: 180px; /* Adjust to match your image size */
+    height: 120px;
+    background: url('./basket9c.png') no-repeat center;
+    background-size: contain;
+    pointer-events: none; /* Prevents blocking clicks */
+    transform: translate(-50%, -50%);
+  }
+
+
+
+
+  #popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    height: 75%;
+    background: rgb(18, 206, 153);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+    background-image: url("drawing.jpg");
+    background-size: contain; 
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.popText{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    font-size: 1.3rem;
+}
+.popupBtn{
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+    width: 90%;
+    height: 10%;
+    background-color: rgb(40, 152, 222);
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+
+}
+.popupBtn:hover{
+    cursor: pointer;
+    font-size: 1.4rem;
+    background-color: rgb(236, 38, 236);
+    
+}
+.fa-heart{
+    color: red;
+    position: absolute;
+    top: 15% !important;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+.hi{
+    position: absolute;
+    left: 50%;
+    top: 2%;
+    transform: translate(-50%,-50%);
+    font-size: 2rem;
+    
+}
+h4{
+    position: absolute;
+    left: 50%;
+    top: 43%;
+    transform: translate(-50%,-50%);
+    font-size: 1.6rem;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+.musBtn{
+    background-color: transparent;
+}
+button:hover{
+    cursor: pointer;
+}
+#awardImg{
+    position: absolute;
+    top: 39%;
+    left: 22.5%;
+    transform: translate(-50% -50%);
+    width: 55%;
+    height: 43%;
+}
+#popupAward {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    height: 75%;
+    background: rgb(90, 189, 161);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+}
+#popupAward h1, h2{
+   text-align: center;
+}
+.awardBtn{
+    position: fixed;
+    top: 1%;
+    right: 1%;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 0.5%;
+}
+.awardBtnX{
+    position: fixed;
+    top: 1%;
+    right: 1%;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 0.5%;
+    border-color: transparent;
+}
+.awardBtnX:hover{
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+.gallery {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 50%; /* Adjust size */
+    height: 40%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+#imageText {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.imgBtn {
+    position: absolute;
+    bottom: 1%;
+    left: 10%;
+    margin: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+.imgBtn2 {
+    position: absolute;
+    bottom: 1%;
+    right: 10%;
+    margin: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.imgBtn:hover, .imgBtn2:hover {
+    background-color: #0056b3;
+}
+.musBtn{
+    position: absolute;
+    top: 1%;
+    left: 0.5%;
+}
+.musBtn:hover{
+    background-color: #007bff;
+    font-size: 1rem;
+}

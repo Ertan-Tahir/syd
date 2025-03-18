@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2730/2730685.png" type="image/icon type">
+    <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Game</title>
+</head>
+<body>
+    
+    
+      <audio id="player">
+        <source id="audioSource" src="PianoMan.mp3" type="audio/mpeg">
+      </audio>
+      
+      <div id="overlay"></div>
+      
+      <div id="popupAward">
+        <button class="awardBtnX" onclick="awardPopClose()"><i class="fa fa-times"></i></button>
+        <h1>Possible rewards</h1>
+        <h2>Rewards are based on your score</h2>
+        <div class="gallery">
+            <img id="galleryImg" src="daisy.jpg" alt="Gallery Image">
+            <p id="imageText">1 carrot</p>
+            <button class="imgBtn" onclick="prevImage()">⬅ Previous</button>
+            <button class="imgBtn2" onclick="nextImage()">Next ➡</button>
+        </div>
+    </div>
+    <button id="awardBtn" class="awardBtn" onclick="awardPop()"><i class="fa fa-trophy"></i></button>
+   
+   
+    <div id="popup">
+        <h2 class="hi">Wellocome Syd!</h2>
+        <i class="fa-solid fa-heart"></i>
+        <h4>Music controls</h4>
+        <p class="popText">Spacebar → Next song<br> Enter → Play/Pause<br>M(keyword) → Mute/Unmute 🔇
+            <br>Arrow Right → Skip 5s Forward ⏭<br>
+            Arrow Left → Rewind 5s ⏮</p>
+        <button class="popupBtn" onclick="closePopup()">Play</button>
+    </div>
+
+      <button id="mBtn" class="musBtn" onclick="playNext()">Next Song</button>
+
+    <section class="homeScreen" id="home">
+        <img class="homeImg" src="./1739916888950.jpg" alt="word map"/>
+        <h3 class="hung">We are hungryyy!</h3>
+        <button class="startBtn" id="startBtn" onclick="startBtnFunc()">Feed</button>
+        <i class="fa-solid fa-carrot spiderAnime1"></i>
+        <span class="spiderLine"></span>
+    </section>
+    <section class="gameSection hide" id="gameReveal">
+        <p id="attempt" class="attempt">Attempt: 1</p>
+        <p id="pointsId" class="points">Carrots:<br> 0</p>        
+        <div id="gameEnd" class="game-end-modal hide">
+            <h1>Game Over</h1>
+            <p id="carrotPoints"></p>
+            <div class="award">
+                <p id="awardText">Your reward:</p>
+                <img id="awardImg" src="" alt="Image">
+            </div>
+            <button class="restart-btn" onclick="restartGame()" id="restartBtn">Restart <i class="fa-solid fa-rotate-right"></i></button>
+        </div>
+        
+    </section>
+
+    <div class='pause-modal hide' id="pauseModal">
+        <h1>You paused the game :(</h1>
+        <p>I hope you finish it!!! <i class="fa-solid fa-face-frown"></i></p>
+        <button class="continue-btn" id="continueBtn" onclick="continueFunc()">Continue</button>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+<script src="./game.js"></script>
+</body>
+</html>
